@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  position: relative;
+}
+main > * {z-index: 1}
+main::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-image: url(/src/assets/img/hills.png), linear-gradient(#eab985, #9d8c8b);
+  /* background-image: url(/src/assets/img/hills.png); */
+  background-position: bottom center, 0;
+  background-size: contain, 100%;
+  background-repeat: no-repeat, no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 49% 94%, 36% 94%, 24% 95%, 11% 97%, 0 100%);
+}
